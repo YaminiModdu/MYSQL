@@ -1,0 +1,29 @@
+1.Display all records from the employee table
+ANS)  SELECT * FROM Employees;
+
+2.Display only EmpName and Salary of all employess
+ANS) SELECT EmpName, Salary FROM Employees;
+
+3.find all employees Who belong to the IT department
+ANS) SELECT * FROM Employees WHERE DeptID = (SELECT DeptID FROM Departmets WHERE DeptName = 'IT');
+
+4.List employees Whose salary is greater than 50000
+ANS) SELECT * FROM Employees WHERE Salary > 50000;
+
+5.find employees hierd before 2020-01-01
+ANS) SELECT * FROM Employees WHERE HireDate < '2020-01-01';
+
+6.Display employees in descending order of salary
+ANS) SELECT * FROM Employees ORDER BY Salary DESC;
+
+7.Count total number of employees
+ANS)  SELECT COUNT(*) FROM Employees;
+
+8.Find the average salary of all employees
+ANS)  SELECT AVG(Salary) FROM Employees;
+
+9.Find the maximum salary in each department
+ANS)  SELECT DeptID, MAX(Salary) FROM Employees GROUP BY DeptID;
+
+10.Find department having more than 1 employee
+ANS)  SELECT DeptID FROM Employees GROUP BY DeptID HAVING COUNT(EmpID) > 1;
