@@ -1,0 +1,21 @@
+DAY 2 :
+
+
+11) Display employees whose name start with 'A'.
+ANS) SELECT * FROM Employees WHERE EmpName LIKE 'A%';
+
+
+12) Find employees whose salary is between 45,000 and 60,000.
+ANS) SELECT * FROM Employees WHERE Salary BETWEEN 45000 AND 60000;
+
+
+13) Show the department name of each employee (JOIN query).
+ANS) SELECT E.EmpName, D.DeptName FROM Employees E INNER JOIN Departments D ON E.DeptID = D.DeptID;
+
+
+14) Find the number of employees in each department.
+ANS) SELECT DeptID, COUNT(*) AS NumberOfEmployees FROM Employees GROUP BY DeptID;
+
+
+15) Display all employees, including those without a dapartment(LEFT JOIN).
+ANS) SELECT E.EmpNAme, D.DeptName FROM Employees E LEFT JOIN Departments D ON E.DeptID = D.DeptID;
